@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Liika Photographe | Photographie de Mariage de Luxe</title>
+    <meta name="description" content="Photographie de mariage de luxe à Tétouan, Maroc. Capturer l'élégance intemporelle de votre histoire d'amour avec un style éditorial cinématographique.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@200;300;400;500&family=Lato:wght@100;300;400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">Liika</a>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+            <li><a href="#contact" data-i18n="nav_book">Réserver</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="lang-switcher">
+                <a href="#" class="lang-btn active" data-lang="fr">FR</a>
+                <span class="lang-sep">/</span>
+                <a href="#" class="lang-btn" data-lang="ar">عربي</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+            <li><a href="#contact" data-i18n="nav_book">Réserver</a></li>
+        </ul>
+        <div class="lang-switcher mobile-lang">
+            <a href="#" class="lang-btn active" data-lang="fr">FR</a>
+            <span class="lang-sep">/</span>
+            <a href="#" class="lang-btn" data-lang="ar">عربي</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <header id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge" data-i18n="hero_badge">Tétouan, Maroc</div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line" data-i18n="hero_line1">Luxury Wedding</span>
+                    <span class="hero-title-line" data-i18n="hero_line2">Photography</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">L'art de capturer des moments intemporels</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn--primary" data-i18n="hero_cta">Réserver Votre Date</a>
+                    <a href="#portfolio" class="btn btn--ghost" data-i18n="hero_cta2">Découvrir</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </header>
+
+        <!-- ===== STATEMENT ===== -->
+        <section class="statement reveal">
+            <div class="statement-inner">
+                <h2 class="statement-title" data-i18n="statement_title">Nous ne prenons pas de photos.<br>Nous créons des héritages visuels.</h2>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED IMAGE ===== -->
+        <section class="featured-image reveal">
+            <div class="featured-image-wrapper">
+                <img src="assets/images/IMG_7260.PNG" alt="Portrait de mariée" loading="lazy">
+                <div class="featured-caption">
+                    <span class="featured-label" data-i18n="featured_label">Élégance Pure</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INTRO NARRATIVE ===== -->
+        <section class="narrative reveal">
+            <div class="narrative-content">
+                <span class="eyebrow" data-i18n="narrative_eyebrow">Notre Vision</span>
+                <h2 data-i18n="narrative_title">La poésie visuelle<br>de votre union</h2>
+                <div class="narrative-text">
+                    <p data-i18n="narrative_p1">Chaque mariage est une œuvre d'art unique. Notre approche éditoriale capture l'essence émotionnelle de votre journée avec une élégance cinématographique qui transcende le temps.</p>
+                    <p data-i18n="narrative_p2">Basés à Tétouan, nous nous inspirons des textures riches du Maroc, de la lumière dorée de la Méditerranée et de l'intimité authentique de votre histoire d'amour.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO GALLERY ===== -->
+        <section id="portfolio" class="portfolio">
+            <div class="section-header reveal">
+                <span class="eyebrow" data-i18n="portfolio_eyebrow">Portfolio</span>
+                <h2 data-i18n="portfolio_title">Collections Choisies</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Large hero image -->
+                <div class="portfolio-item portfolio-item--large reveal" data-aos-delay="0">
+                    <div class="portfolio-image">
+                        <img src="assets/images/IMG_7260.PNG" alt="Portrait mariée" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-caption" data-i18n="port_cap1">La Mariée</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium - Bouquet -->
+                <div class="portfolio-item portfolio-item--medium reveal" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="assets/images/IMG_7256.PNG" alt="Bouquet de roses" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-caption" data-i18n="port_cap2">Le Bouquet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small - Ring -->
+                <div class="portfolio-item portfolio-item--small reveal" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="assets/images/IMG_7257.PNG" alt="Bague de fiançailles" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-caption" data-i18n="port_cap3">L'Alliance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tall - Henna detail -->
+                <div class="portfolio-item portfolio-item--tall reveal" data-aos-delay="150">
+                    <div class="portfolio-image">
+                        <img src="assets/images/IMG_7258.PNG" alt="Détail henné" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-caption" data-i18n="port_cap4">Traditions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EMOTIONAL DIPTYCH ===== -->
+        <section class="diptych reveal">
+            <div class="diptych-item diptych-item--left">
+                <img src="assets/images/IMG_7257.PNG" alt="Détail bague" loading="lazy">
+            </div>
+            <div class="diptych-item diptych-item--right">
+                <div class="diptych-content">
+                    <span class="eyebrow" data-i18n="diptych_eyebrow">Les Détails</span>
+                    <h3 data-i18n="diptych_title">Chaque détail<br>raconte une histoire</h3>
+                    <p data-i18n="diptych_text">Des anneaux d'alliance aux traditions du henné, nous immortalisons les moments intimes qui définissent votre célébration unique.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section id="services" class="services reveal">
+            <div class="services-container">
+                <div class="services-header">
+                    <span class="eyebrow" data-i18n="services_eyebrow">Services</span>
+                    <h2 data-i18n="services_title">Une Expérience<br>Sur Mesure</h2>
+                    <p class="services-intro" data-i18n="services_intro">De la consultation initiale à la livraison de votre album d'art, chaque étape est orchestrée avec soin pour créer une expérience luxueuse et sans stress.</p>
+                </div>
+
+                <div class="services-list">
+                    <div class="service-card reveal" data-aos-delay="0">
+                        <div class="service-number">01</div>
+                        <h3 data-i18n="service1_title">Collection Signature</h3>
+                        <p data-i18n="service1_desc">Couverture complète du jour J, second photographe, galerie privée en ligne et album premium façonné à la main.</p>
+                        <div class="service-features">
+                            <span data-i18n="service1_f1">• Couverture 8-12 heures</span>
+                            <span data-i18n="service1_f2">• 500+ photos éditées</span>
+                            <span data-i18n="service1_f3">• Album d'art 30x30cm</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal" data-aos-delay="100">
+                        <div class="service-number">02</div>
+                        <h3 data-i18n="service2_title">Destination Wedding</h3>
+                        <p data-i18n="service2_desc">Couverture exclusive pour cérémonies intimes dans des lieux exceptionnels à travers le Maroc et l'international.</p>
+                        <div class="service-features">
+                            <span data-i18n="service2_f1">• Voyages au Maroc inclus</span>
+                            <span data-i18n="service2_f2">• Repérages pré-mariage</span>
+                            <span data-i18n="service2_f3">• Drone & vidéo disponibles</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal" data-aos-delay="200">
+                        <div class="service-number">03</div>
+                        <h3 data-i18n="service3_title">Séance Éditoriale</h3>
+                        <p data-i18n="service3_desc">Une session créative et stylisée pour vos fiançailles, portrait de couple ou célébration pré-mariage.</p>
+                        <div class="service-features">
+                            <span data-i18n="service3_f1">• Direction artistique</span>
+                            <span data-i18n="service3_f2">• Lieux personnalisés</span>
+                            <span data-i18n="service3_f3">• 75+ photos éditées</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT / FOUNDER ===== -->
+        <section id="about" class="about reveal">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/images/real_3.jpg" alt="Liika Photographe" loading="lazy">
+                    <div class="about-image-accent"></div>
+                </div>
+                <div class="about-content">
+                    <span class="eyebrow" data-i18n="about_eyebrow">L'Artiste</span>
+                    <h2 data-i18n="about_title">Derrière l'Objectif</h2>
+                    <div class="about-text">
+                        <p data-i18n="about_p1">Je suis une conteuse d'histoires visuelles, inspirée par le jeu subtil de la lumière, l'architecture intemporelle et les émotions authentiques.</p>
+                        <p data-i18n="about_p2">Basée à Tétouan, mon travail est profondément influencé par la richesse culturelle du Maroc — ses textures somptueuses, ses palettes chaleureuses et ses traditions ancestrales.</p>
+                        <p data-i18n="about_p3">Avec un œil éditorial formé aux standards internationaux et un cœur de documentariste, je me consacre à préserver votre héritage avec une élégance absolue.</p>
+                    </div>
+                    <div class="about-signature">Liika</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section id="testimonials" class="testimonials reveal">
+            <div class="testimonials-header">
+                <span class="eyebrow" data-i18n="testi_eyebrow">Témoignages</span>
+                <h2 data-i18n="testi_title">Moments Partagés</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial reveal" data-aos-delay="0">
+                    <div class="testimonial-quote">
+                        <svg class="quote-icon" width="32" height="28" viewBox="0 0 32 28" fill="none">
+                            <path d="M0 13.68C0 6.12 4.64 0 13.76 0v5.6C9.44 6.32 7.52 9.28 7.2 12.4h6.56v15.2H0V13.68zm18.24 0C18.24 6.12 22.88 0 32 0v5.6c-4.32.72-6.24 3.68-6.56 6.8h6.56v15.2H18.24V13.68z" fill="currentColor" opacity="0.1"/>
+                        </svg>
+                        <p data-i18n="testi1_quote">Les photos de notre mariage sont un véritable chef-d'œuvre. Chaque émotion a été capturée avec une sensibilité et une élégance extraordinaires. Liika a su transformer notre journée en poésie visuelle.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong data-i18n="testi1_name">Sophie & Marc</strong>
+                        <span data-i18n="testi1_location">Tanger, 2025</span>
+                    </div>
+                </div>
+
+                <div class="testimonial reveal" data-aos-delay="100">
+                    <div class="testimonial-quote">
+                        <svg class="quote-icon" width="32" height="28" viewBox="0 0 32 28" fill="none">
+                            <path d="M0 13.68C0 6.12 4.64 0 13.76 0v5.6C9.44 6.32 7.52 9.28 7.2 12.4h6.56v15.2H0V13.68zm18.24 0C18.24 6.12 22.88 0 32 0v5.6c-4.32.72-6.24 3.68-6.56 6.8h6.56v15.2H18.24V13.68z" fill="currentColor" opacity="0.1"/>
+                        </svg>
+                        <p data-i18n="testi2_quote">Travailler avec Liika a été la meilleure décision de notre mariage. Son œil artistique et son professionnalisme nous ont offert des images dignes d'un magazine de haute couture.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong data-i18n="testi2_name">Amira & Youssef</strong>
+                        <span data-i18n="testi2_location">Marrakech, 2024</span>
+                    </div>
+                </div>
+
+                <div class="testimonial reveal" data-aos-delay="200">
+                    <div class="testimonial-quote">
+                        <svg class="quote-icon" width="32" height="28" viewBox="0 0 32 28" fill="none">
+                            <path d="M0 13.68C0 6.12 4.64 0 13.76 0v5.6C9.44 6.32 7.52 9.28 7.2 12.4h6.56v15.2H0V13.68zm18.24 0C18.24 6.12 22.88 0 32 0v5.6c-4.32.72-6.24 3.68-6.56 6.8h6.56v15.2H18.24V13.68z" fill="currentColor" opacity="0.1"/>
+                        </svg>
+                        <p data-i18n="testi3_quote">Un talent rare pour capturer l'instant présent avec une beauté intemporelle. Chaque photo raconte notre histoire avec une intensité émotionnelle qui nous fait pleurer de joie.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong data-i18n="testi3_name">Elena & Thomas</strong>
+                        <span data-i18n="testi3_location">Chefchaouen, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TEAM ===== -->
+        <section id="team" class="team reveal">
+            <div class="team-layout">
+                <div class="team-content">
+                    <span class="eyebrow" data-i18n="team_eyebrow">Notre Équipe</span>
+                    <h2 data-i18n="team_title">Les Artisans<br>de la Lumière</h2>
+                    <p data-i18n="team_text">Nous sommes un collectif restreint de créatifs passionnés, unis par une vision commune de l'excellence. Ensemble, nous orchestrons chaque mariage comme une chorégraphie visuelle, alliant précision éditoriale et sensibilité émotionnelle.</p>
+                    <p data-i18n="team_text2">Notre approche collaborative garantit que chaque angle, chaque lumière et chaque instant soit capturé avec l'attention qu'il mérite.</p>
+                </div>
+                <div class="team-image">
+                    <img src="assets/images/real_2.jpg" alt="L'équipe Liika" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="contact reveal">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <span class="eyebrow" data-i18n="contact_eyebrow">Contact</span>
+                    <h2 data-i18n="contact_title">Commençons Votre Histoire</h2>
+                    <p data-i18n="contact_subtitle">Nous n'acceptons qu'un nombre limité de mariages chaque année pour garantir un service d'excellence et une attention totale à chaque couple.</p>
+                </div>
+
+                <div class="contact-methods">
+                    <a href="https://wa.me/212600000000" class="contact-method" target="_blank" rel="noopener">
+                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                        </svg>
+                        <div>
+                            <strong data-i18n="contact_wa_title">WhatsApp</strong>
+                            <span data-i18n="contact_wa_desc">Discutez avec nous</span>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/liikaphotographe" class="contact-method" target="_blank" rel="noopener">
+                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                        </svg>
+                        <div>
+                            <strong data-i18n="contact_ig_title">Instagram</strong>
+                            <span data-i18n="contact_ig_desc">Découvrez notre portfolio</span>
+                        </div>
+                    </a>
+                </div>
+
+                <form class="contact-form" id="bookingForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="names" data-i18n="form_names">Noms du Couple</label>
+                            <input type="text" id="names" name="names" required placeholder="Jane & John" data-i18n-placeholder="form_names_ph">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="form_email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="hello@example.com" data-i18n-placeholder="form_email_ph">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+212 6 00 00 00 00" data-i18n-placeholder="form_phone_ph">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date" data-i18n="form_date">Date du Mariage</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-i18n="form_message">Parlez-nous de votre vision</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Partagez votre histoire, vos inspirations..." data-i18n-placeholder="form_message_ph"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full" data-i18n="form_submit">Envoyer la Demande</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+        <img src="" alt="Image agrandie" id="lightboxImg">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Liika</div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://instagram.com/liikaphotographe" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a>
+            </div>
+            <p class="footer-copy">
+                &copy; <span id="currentYear"></span> <span data-i18n="footer_text">Liika Photographe · Tétouan, Maroc</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
