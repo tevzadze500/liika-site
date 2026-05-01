@@ -1,570 +1,582 @@
 /* =========================================================================
-   LIIKA PHOTOGRAPHE — JavaScript
-   Premium Wedding Photography Website
+   LIIKA PHOTOGRAPHE — Editorial Wedding Photography
    ========================================================================= */
 
+/* ====== CONFIG — À PERSONNALISER ====== */
+const CONFIG = {
+    // Numéro WhatsApp au format international, sans + ni espaces (ex: 212612345678)
+    whatsappNumber: '212642159752',
+    // Email de contact (utilisé pour le fallback mailto: et comme adresse de notification Formspree)
+    email: 'kouhhizomar12@gmail.com',
+    // Endpoint Formspree (https://formspree.io). Vide = fallback mailto activé.
+    // Pour activer Formspree plus tard: créer un form sur formspree.io et coller l'endpoint ici.
+    formspreeEndpoint: ''
+};
+
+/* ====== TRANSLATIONS ====== */
 const translations = {
     fr: {
-        // Meta & Nav
-        page_title: "Liika Photographe | Photographie de Mariage de Luxe",
+        page_title: "Liika Photographe — Photographie de Mariage Éditoriale · Tétouan",
+        logo_sub: "Photographe",
+
         nav_home: "Accueil",
         nav_portfolio: "Portfolio",
-        nav_services: "Services",
+        nav_services: "Expérience",
         nav_about: "À propos",
+        nav_studio: "Studio",
         nav_book: "Réserver",
-        
-        // Hero
-        hero_badge: "Tétouan, Maroc",
-        hero_line1: "Luxury Wedding",
-        hero_line2: "Photography",
-        hero_subtitle: "L'art de capturer des moments intemporels",
-        hero_cta: "Réserver Votre Date",
-        hero_cta2: "Découvrir",
-        
-        // Statement
-        statement_title: "Nous ne prenons pas de photos.<br>Nous créons des héritages visuels.",
-        
-        // Featured
-        featured_label: "Élégance Pure",
-        
-        // Narrative
-        narrative_eyebrow: "Notre Vision",
-        narrative_title: "La poésie visuelle<br>de votre union",
-        narrative_p1: "Chaque mariage est une œuvre d'art unique. Notre approche éditoriale capture l'essence émotionnelle de votre journée avec une élégance cinématographique qui transcende le temps.",
-        narrative_p2: "Basés à Tétouan, nous nous inspirons des textures riches du Maroc, de la lumière dorée de la Méditerranée et de l'intimité authentique de votre histoire d'amour.",
-        
-        // Portfolio
-        portfolio_eyebrow: "Portfolio",
-        portfolio_title: "Collections Choisies",
+        menu_tag: "Tétouan · Maroc",
+
+        hero_meta_loc: "Tétouan · Maroc",
+        hero_meta_year: "Saison 2025 — 2026",
+        hero_kicker: "— Photographie éditoriale de mariage —",
+        hero_l1: "L'éternité",
+        hero_l2: "<em>en lumière</em>",
+        hero_sub: "Une approche cinématographique du mariage. Images sensibles, intemporelles, pensées comme des œuvres.",
+        hero_cta1: "Réserver votre date",
+        hero_cta2: "Voir le portfolio",
+        scroll: "Découvrir",
+
+        mani_eyebrow: "Notre vision",
+        mani_l1: "Nous ne photographions pas un mariage.",
+        mani_l2: "Nous composons un héritage.",
+        mani_text: "Chaque image est pensée comme la page d'un livre que vos enfants ouvriront un jour. Lumière naturelle, gestes silencieux, vérité des regards — la photographie comme acte d'amour.",
+
+        featured_kicker: "Chapitre I",
+        featured_title: "L'instant du regard",
+
+        port_kicker: "— Portfolio —",
+        port_title_l1: "Une sélection",
+        port_title_l2: "de moments",
+        port_lede: "Six fragments choisis parmi nos collections récentes. Chaque image porte une histoire, une lumière, un silence.",
         port_cap1: "La Mariée",
         port_cap2: "Le Bouquet",
         port_cap3: "L'Alliance",
         port_cap4: "Traditions",
-        
-        // Diptych
-        diptych_eyebrow: "Les Détails",
-        diptych_title: "Chaque détail<br>raconte une histoire",
-        diptych_text: "Des anneaux d'alliance aux traditions du henné, nous immortalisons les moments intimes qui définissent votre célébration unique.",
-        
-        // Services
-        services_eyebrow: "Services",
-        services_title: "Une Expérience<br>Sur Mesure",
-        services_intro: "De la consultation initiale à la livraison de votre album d'art, chaque étape est orchestrée avec soin pour créer une expérience luxueuse et sans stress.",
-        
-        service1_title: "Collection Signature",
-        service1_desc: "Couverture complète du jour J, second photographe, galerie privée en ligne et album premium façonné à la main.",
-        service1_f1: "• Couverture 8-12 heures",
-        service1_f2: "• 500+ photos éditées",
-        service1_f3: "• Album d'art 30x30cm",
-        
-        service2_title: "Destination Wedding",
-        service2_desc: "Couverture exclusive pour cérémonies intimes dans des lieux exceptionnels à travers le Maroc et l'international.",
-        service2_f1: "• Voyages au Maroc inclus",
-        service2_f2: "• Repérages pré-mariage",
-        service2_f3: "• Drone & vidéo disponibles",
-        
-        service3_title: "Séance Éditoriale",
-        service3_desc: "Une session créative et stylisée pour vos fiançailles, portrait de couple ou célébration pré-mariage.",
-        service3_f1: "• Direction artistique",
-        service3_f2: "• Lieux personnalisés",
-        service3_f3: "• 75+ photos éditées",
-        
-        // About
-        about_eyebrow: "L'Artiste",
-        about_title: "Derrière l'Objectif",
-        about_p1: "Je suis une conteuse d'histoires visuelles, inspirée par le jeu subtil de la lumière, l'architecture intemporelle et les émotions authentiques.",
-        about_p2: "Basée à Tétouan, mon travail est profondément influencé par la richesse culturelle du Maroc — ses textures somptueuses, ses palettes chaleureuses et ses traditions ancestrales.",
-        about_p3: "Avec un œil éditorial formé aux standards internationaux et un cœur de documentariste, je me consacre à préserver votre héritage avec une élégance absolue.",
-        
-        // Testimonials
-        testi_eyebrow: "Témoignages",
-        testi_title: "Moments Partagés",
-        
-        testi1_quote: "Les photos de notre mariage sont un véritable chef-d'œuvre. Chaque émotion a été capturée avec une sensibilité et une élégance extraordinaires. Liika a su transformer notre journée en poésie visuelle.",
-        testi1_name: "Sophie & Marc",
-        testi1_location: "Tanger, 2025",
-        
-        testi2_quote: "Travailler avec Liika a été la meilleure décision de notre mariage. Son œil artistique et son professionnalisme nous ont offert des images dignes d'un magazine de haute couture.",
-        testi2_name: "Amira & Youssef",
-        testi2_location: "Marrakech, 2024",
-        
-        testi3_quote: "Un talent rare pour capturer l'instant présent avec une beauté intemporelle. Chaque photo raconte notre histoire avec une intensité émotionnelle qui nous fait pleurer de joie.",
-        testi3_name: "Elena & Thomas",
-        testi3_location: "Chefchaouen, 2025",
-        
-        // Team
-        team_eyebrow: "Notre Équipe",
-        team_title: "Les Artisans<br>de la Lumière",
-        team_text: "Nous sommes un collectif restreint de créatifs passionnés, unis par une vision commune de l'excellence. Ensemble, nous orchestrons chaque mariage comme une chorégraphie visuelle, alliant précision éditoriale et sensibilité émotionnelle.",
-        team_text2: "Notre approche collaborative garantit que chaque angle, chaque lumière et chaque instant soit capturé avec l'attention qu'il mérite.",
-        
-        // Contact
-        contact_eyebrow: "Contact",
-        contact_title: "Commençons Votre Histoire",
-        contact_subtitle: "Nous n'acceptons qu'un nombre limité de mariages chaque année pour garantir un service d'excellence et une attention totale à chaque couple.",
-        
-        contact_wa_title: "WhatsApp",
-        contact_wa_desc: "Discutez avec nous",
-        contact_ig_title: "Instagram",
-        contact_ig_desc: "Découvrez notre portfolio",
-        
-        // Form
-        form_names: "Noms du Couple",
-        form_names_ph: "Jane & John",
-        form_email: "Email",
-        form_email_ph: "hello@example.com",
-        form_phone: "Téléphone",
-        form_phone_ph: "+212 6 00 00 00 00",
-        form_date: "Date du Mariage",
-        form_message: "Parlez-nous de votre vision",
-        form_message_ph: "Partagez votre histoire, vos inspirations...",
-        form_submit: "Envoyer la Demande",
-        
-        // Footer
-        footer_text: "Liika Photographe · Tétouan, Maroc",
-        
-        // Success
-        success_msg: "✨ Demande envoyée avec succès ! Nous vous contacterons dans les 48 heures."
+        port_cap5: "La Cérémonie",
+        port_cap6: "L'Intime",
+
+        quote_text: "La photographie n'est pas un souvenir — c'est une promesse faite au temps.",
+
+        dip_kicker: "— Les Détails —",
+        dip_l1: "Chaque détail",
+        dip_l2: "raconte une histoire",
+        dip_p: "Du tissu de la robe au reflet d'une alliance, du henné aux fleurs séchées dans un livre — nous photographions ce que personne d'autre ne remarque.",
+        dip_cta: "Réserver une consultation →",
+
+        exp_kicker: "— Expérience —",
+        exp_title_l1: "Une expérience",
+        exp_title_l2: "sur mesure",
+        exp_lede: "Trois collections, pensées comme trois récits différents. Chacune intègre direction artistique, retouche signature et livraison sur galerie privée.",
+        exp_badge: "Le plus demandé",
+        exp_foot: "Tarifs sur demande · Devis personnalisé sous 48h",
+
+        exp1_title: "Collection Signature",
+        exp1_desc: "Couverture complète de votre journée, second photographe, galerie privée et album d'art façonné à la main.",
+        exp1_f1: "Couverture 8 à 12 heures",
+        exp1_f2: "500+ images éditées en signature",
+        exp1_f3: "Album d'art 30×30 cm",
+        exp1_f4: "Galerie privée en ligne",
+
+        exp2_title: "Destination Wedding",
+        exp2_desc: "Mariages d'exception au Maroc et à l'international. Repérage, direction artistique, cinéma et drone disponibles.",
+        exp2_f1: "Voyages au Maroc inclus",
+        exp2_f2: "Repérages pré-mariage",
+        exp2_f3: "Drone et film disponibles",
+        exp2_f4: "Album premium 40×30 cm",
+
+        exp3_title: "Séance Éditoriale",
+        exp3_desc: "Une session créative et stylisée — fiançailles, portrait de couple ou shooting pré-mariage.",
+        exp3_f1: "Direction artistique",
+        exp3_f2: "Lieux personnalisés",
+        exp3_f3: "75+ images en signature",
+        exp3_f4: "Tirages fine art en option",
+
+        about_kicker: "— L'artiste —",
+        about_title_l1: "Derrière",
+        about_title_l2: "l'objectif",
+        about_tag: "Liika · Tétouan, Maroc",
+        about_p1: "Conteuse d'histoires visuelles, je suis sensible au jeu silencieux de la lumière sur la peau, à l'architecture intemporelle et à la vérité d'un regard.",
+        about_p2: "Basée à Tétouan, mon œil est nourri par la richesse culturelle du Maroc — ses textures, ses traditions, ses palettes de fin d'après-midi.",
+        about_p3: "Formée aux standards de l'édition internationale, je consacre chaque mariage à une seule chose : préserver votre histoire avec la grâce qu'elle mérite.",
+
+        testi_kicker: "— Témoignages —",
+        testi_l1: "Mots",
+        testi_l2: "partagés",
+        t1_q: "Les photos de notre mariage sont un véritable chef-d'œuvre. Chaque émotion a été capturée avec une sensibilité extraordinaire. Liika a su transformer notre journée en poésie visuelle.",
+        t1_n: "Sophie & Marc",
+        t1_l: "Tanger · 2025",
+        t2_q: "Travailler avec Liika a été la meilleure décision de notre mariage. Son œil artistique nous a offert des images dignes d'un magazine de haute couture.",
+        t2_n: "Amira & Youssef",
+        t2_l: "Marrakech · 2024",
+        t3_q: "Un talent rare pour capturer l'instant présent avec une beauté intemporelle. Chaque photo nous fait pleurer de joie, encore aujourd'hui.",
+        t3_n: "Elena & Thomas",
+        t3_l: "Chefchaouen · 2025",
+
+        team_kicker: "— Le moment —",
+        team_text: "Photographier un mariage, c'est devenir invisible pour mieux capturer l'essentiel.",
+
+        studio_kicker: "— Le Studio —",
+        studio_l1: "Venez nous",
+        studio_l2: "rencontrer",
+        studio_lede: "Pour un café, un thé à la menthe, une consultation autour de votre projet — vous êtes les bienvenus dans notre studio à Tétouan.",
+        studio_addr_l: "Adresse",
+        studio_phone_l: "Téléphone",
+        studio_hours_l: "Sur rendez-vous",
+        studio_hours_v: "Lundi — Samedi · 10h à 19h",
+        studio_dir: "Itinéraire →",
+
+        contact_kicker: "— Réservation —",
+        contact_l1: "Commençons",
+        contact_l2: "votre histoire",
+        contact_lede: "Nous n'acceptons qu'un nombre limité de mariages chaque année pour garantir une attention totale à chaque couple. Réponse personnalisée sous 48h.",
+        f_names: "Noms du couple",
+        f_email: "Email",
+        f_phone: "Téléphone",
+        f_date: "Date du mariage",
+        f_location: "Lieu envisagé",
+        f_coll: "Collection souhaitée",
+        f_coll_default: "— Choisir —",
+        f_coll_1: "Collection Signature",
+        f_coll_2: "Destination Wedding",
+        f_coll_3: "Séance Éditoriale",
+        f_coll_4: "Autre / À discuter",
+        f_msg: "Parlez-nous de votre vision",
+        f_submit: "Envoyer la demande",
+        f_foot: "Vos informations sont confidentielles. Aucun spam, jamais.",
+        success_msg: "Merci. Votre message a été envoyé. Nous reviendrons vers vous sous 48h.",
+        sending_msg: "Envoi en cours…",
+        error_msg: "Une erreur est survenue. Vous pouvez aussi nous contacter directement par email ou WhatsApp.",
+
+        footer_tag: "Photographe de mariage éditorial",
+        footer_loc: "Tétouan · Maroc",
+        footer_explore: "Explorer",
+        footer_follow: "Suivre",
+        footer_contact: "Contact",
+        footer_book: "Demande personnalisée",
+        footer_rights: "Tous droits réservés",
+        footer_credit: "Site édité avec amour à Tétouan"
     },
-    
+
     ar: {
-        // Meta & Nav
-        page_title: "ليكا للتصوير | تصوير حفلات زفاف فاخرة",
+        page_title: "ليكا للتصوير — تصوير أعراس فاخر · تطوان",
+        logo_sub: "مصورة",
+
         nav_home: "الرئيسية",
-        nav_portfolio: "معرض الصور",
-        nav_services: "الخدمات",
-        nav_about: "نبذة عنا",
-        nav_book: "احجز الآن",
-        
-        // Hero
-        hero_badge: "تطوان، المغرب",
-        hero_line1: "تصوير زفاف",
-        hero_line2: "فاخر",
-        hero_subtitle: "فن توثيق اللحظات الخالدة",
-        hero_cta: "احجز موعدك",
-        hero_cta2: "اكتشف المزيد",
-        
-        // Statement
-        statement_title: "نحن لا نلتقط الصور.<br>نحن نصنع إرثاً بصرياً.",
-        
-        // Featured
-        featured_label: "أناقة خالصة",
-        
-        // Narrative
-        narrative_eyebrow: "رؤيتنا",
-        narrative_title: "الشعر البصري<br>لزفافكم",
-        narrative_p1: "كل زفاف هو عمل فني فريد. يوثق أسلوبنا التحريري جوهر يومكم الخاص بأناقة سينمائية تتجاوز الزمن.",
-        narrative_p2: "من تطوان، نستلهم من نسيج المغرب الغني، وضوء البحر الأبيض المتوسط الذهبي، والحميمية الأصيلة لقصة حبكم.",
-        
-        // Portfolio
-        portfolio_eyebrow: "معرض الصور",
-        portfolio_title: "مجموعات مختارة",
+        nav_portfolio: "أعمالنا",
+        nav_services: "التجربة",
+        nav_about: "من نحن",
+        nav_studio: "الاستوديو",
+        nav_book: "الحجز",
+        menu_tag: "تطوان · المغرب",
+
+        hero_meta_loc: "تطوان · المغرب",
+        hero_meta_year: "موسم 2025 — 2026",
+        hero_kicker: "— تصوير أعراس بأسلوب مجلات الموضة —",
+        hero_l1: "الخلود",
+        hero_l2: "<em>في النور</em>",
+        hero_sub: "نهج سينمائي للأعراس. صور حساسة، خالدة، مصممة كأعمال فنية.",
+        hero_cta1: "احجزي تاريخك",
+        hero_cta2: "اكتشفي أعمالنا",
+        scroll: "اكتشف",
+
+        mani_eyebrow: "رؤيتنا",
+        mani_l1: "نحن لا نصور حفل زفاف.",
+        mani_l2: "نحن نؤلف إرثًا.",
+        mani_text: "كل صورة مُتخيَّلة كصفحة من كتاب سيفتحه أطفالكم يوماً ما. ضوء طبيعي، حركات صامتة، صدق النظرات — التصوير كفعل حب.",
+
+        featured_kicker: "الفصل الأول",
+        featured_title: "لحظة النظرة",
+
+        port_kicker: "— أعمالنا —",
+        port_title_l1: "مجموعة",
+        port_title_l2: "من اللحظات",
+        port_lede: "ست لقطات مختارة من مجموعاتنا الأخيرة. كل صورة تحمل قصة، ضوءاً، صمتاً.",
         port_cap1: "العروس",
         port_cap2: "الباقة",
         port_cap3: "الخاتم",
         port_cap4: "التقاليد",
-        
-        // Diptych
-        diptych_eyebrow: "التفاصيل",
-        diptych_title: "كل تفصيلة<br>تروي قصة",
-        diptych_text: "من خواتم الزواج إلى تقاليد الحناء، نخلد اللحظات الحميمة التي تحدد احتفالكم الفريد.",
-        
-        // Services
-        services_eyebrow: "الخدمات",
-        services_title: "تجربة<br>مخصصة",
-        services_intro: "من الاستشارة الأولية إلى تسليم ألبوم الصور الفني، كل مرحلة منسقة بعناية لخلق تجربة فاخرة وخالية من الإجهاد.",
-        
-        service1_title: "المجموعة المميزة",
-        service1_desc: "تغطية كاملة ليوم الزفاف، مصور ثانٍ، معرض خاص عبر الإنترنت وألبوم فني مصنوع يدوياً.",
-        service1_f1: "• تغطية 8-12 ساعة",
-        service1_f2: "• أكثر من 500 صورة معدلة",
-        service1_f3: "• ألبوم فني 30×30 سم",
-        
-        service2_title: "زفاف الوجهات",
-        service2_desc: "تغطية حصرية لحفلات حميمية في أماكن استثنائية في المغرب ودولياً.",
-        service2_f1: "• السفر داخل المغرب مشمول",
-        service2_f2: "• جولات استكشافية قبل الزفاف",
-        service2_f3: "• طائرة درون وفيديو متوفر",
-        
-        service3_title: "جلسة تحريرية",
-        service3_desc: "جلسة إبداعية مصممة خصيصاً لخطوبتكم، صور الأزواج أو احتفال ما قبل الزفاف.",
-        service3_f1: "• توجيه فني",
-        service3_f2: "• أماكن مخصصة",
-        service3_f3: "• أكثر من 75 صورة معدلة",
-        
-        // About
-        about_eyebrow: "الفنانة",
-        about_title: "خلف العدسة",
-        about_p1: "أنا راوية قصص بصرية، مستوحاة من التفاعل الدقيق للضوء والهندسة المعمارية الخالدة والعواطف الأصيلة.",
-        about_p2: "من تطوان، يتأثر عملي بعمق بالثراء الثقافي للمغرب — قوامه الفاخر، ولوحاته الدافئة، وتقاليده العريقة.",
-        about_p3: "بعين تحريرية مدربة على المعايير الدولية وقلب وثائقي، أكرس نفسي للحفاظ على إرثكم بأناقة مطلقة.",
-        
-        // Testimonials
-        testi_eyebrow: "آراء العملاء",
-        testi_title: "لحظات مشتركة",
-        
-        testi1_quote: "صور زفافنا تحفة فنية حقيقية. تم توثيق كل عاطفة بحساسية وأناقة استثنائية. تمكنت ليكا من تحويل يومنا إلى شعر بصري.",
-        testi1_name: "صوفي ومارك",
-        testi1_location: "طنجة، 2025",
-        
-        testi2_quote: "كان العمل مع ليكا أفضل قرار في زفافنا. منحتنا عينها الفنية واحترافيتها صوراً تليق بمجلة أزياء راقية.",
-        testi2_name: "أميرة ويوسف",
-        testi2_location: "مراكش، 2024",
-        
-        testi3_quote: "موهبة نادرة في التقاط اللحظة الحاضرة بجمال خالد. كل صورة تروي قصتنا بكثافة عاطفية تجعلنا نبكي من الفرح.",
-        testi3_name: "إلينا وتوماس",
-        testi3_location: "شفشاون، 2025",
-        
-        // Team
-        team_eyebrow: "فريقنا",
-        team_title: "صناع<br>النور",
-        team_text: "نحن مجموعة محدودة من المبدعين المتحمسين، متحدون برؤية مشتركة للتميز. معاً، ننسق كل زفاف كرقصة بصرية، تجمع بين الدقة التحريرية والحساسية العاطفية.",
-        team_text2: "يضمن نهجنا التعاوني التقاط كل زاوية وكل ضوء وكل لحظة بالاهتمام الذي تستحقه.",
-        
-        // Contact
-        contact_eyebrow: "تواصل معنا",
-        contact_title: "لنبدأ قصتكم",
-        contact_subtitle: "نقبل عدداً محدوداً من حفلات الزفاف كل عام لضمان خدمة متميزة واهتمام كامل بكل زوجين.",
-        
-        contact_wa_title: "واتساب",
-        contact_wa_desc: "تحدث معنا",
-        contact_ig_title: "إنستغرام",
-        contact_ig_desc: "اكتشف معرضنا",
-        
-        // Form
-        form_names: "أسماء العروسين",
-        form_names_ph: "ليلى وعمر",
-        form_email: "البريد الإلكتروني",
-        form_email_ph: "hello@example.com",
-        form_phone: "رقم الهاتف",
-        form_phone_ph: "+212 6 00 00 00 00",
-        form_date: "تاريخ الزفاف",
-        form_message: "أخبرنا عن رؤيتك",
-        form_message_ph: "شاركنا قصتك، إلهامك...",
-        form_submit: "إرسال الطلب",
-        
-        // Footer
-        footer_text: "ليكا للتصوير · تطوان، المغرب",
-        
-        // Success
-        success_msg: "✨ تم إرسال الطلب بنجاح! سنتواصل معك خلال 48 ساعة."
+        port_cap5: "الحفل",
+        port_cap6: "الحميمية",
+
+        quote_text: "التصوير ليس ذكرى — بل وعدٌ مقطوع للزمن.",
+
+        dip_kicker: "— التفاصيل —",
+        dip_l1: "كل تفصيل",
+        dip_l2: "يحكي قصة",
+        dip_p: "من قماش الفستان إلى انعكاس الخاتم، من الحناء إلى الأزهار المجففة في كتاب — نلتقط ما لا يلاحظه أحد.",
+        dip_cta: "← احجزي استشارة",
+
+        exp_kicker: "— التجربة —",
+        exp_title_l1: "تجربة",
+        exp_title_l2: "خاصة بكم",
+        exp_lede: "ثلاث مجموعات، مصممة كثلاث روايات مختلفة. كل واحدة تشمل التوجيه الفني، التحرير المميز، والتسليم على معرض خاص.",
+        exp_badge: "الأكثر طلباً",
+        exp_foot: "الأسعار عند الطلب · عرض شخصي خلال 48 ساعة",
+
+        exp1_title: "مجموعة التوقيع",
+        exp1_desc: "تغطية كاملة ليومكم، مصور ثاني، معرض خاص، وألبوم فني مصنوع يدوياً.",
+        exp1_f1: "تغطية من 8 إلى 12 ساعة",
+        exp1_f2: "أكثر من 500 صورة محررة",
+        exp1_f3: "ألبوم فني 30×30 سم",
+        exp1_f4: "معرض خاص على الإنترنت",
+
+        exp2_title: "أعراس الوجهات",
+        exp2_desc: "أعراس استثنائية في المغرب وحول العالم. استكشاف مسبق، توجيه فني، فيديو، وطائرة بدون طيار.",
+        exp2_f1: "السفر داخل المغرب مشمول",
+        exp2_f2: "زيارة الموقع قبل العرس",
+        exp2_f3: "الطائرة بدون طيار والفيديو متاحان",
+        exp2_f4: "ألبوم فاخر 40×30 سم",
+
+        exp3_title: "جلسة تصوير فنية",
+        exp3_desc: "جلسة إبداعية ومنسقة — للخطوبة، أو صور الزوجين، أو ما قبل الزفاف.",
+        exp3_f1: "توجيه فني كامل",
+        exp3_f2: "أماكن مخصصة",
+        exp3_f3: "أكثر من 75 صورة محررة",
+        exp3_f4: "طبعات فنية اختيارية",
+
+        about_kicker: "— الفنانة —",
+        about_title_l1: "خلف",
+        about_title_l2: "العدسة",
+        about_tag: "ليكا · تطوان، المغرب",
+        about_p1: "أنا راوية قصص بصرية، حساسة للعب الصامت للضوء على البشرة، وللعمارة الخالدة، وصدق النظرة.",
+        about_p2: "مقيمة في تطوان، عيني تتغذى من الثراء الثقافي للمغرب — قوامه، تقاليده، ألوان نهاياته الذهبية.",
+        about_p3: "متمرسة على معايير النشر الدولية، أكرس كل عرس لأمر واحد: حفظ قصتكم بالأناقة التي تستحقها.",
+
+        testi_kicker: "— شهادات —",
+        testi_l1: "كلمات",
+        testi_l2: "متبادلة",
+        t1_q: "صور حفل زفافنا تحفة فنية حقيقية. كل عاطفة التُقطت بحساسية استثنائية. حولت ليكا يومنا إلى شعر بصري.",
+        t1_n: "صوفي ومارك",
+        t1_l: "طنجة · 2025",
+        t2_q: "العمل مع ليكا كان أفضل قرار في زفافنا. عينها الفنية أهدتنا صوراً تليق بمجلة هوت كوتور.",
+        t2_n: "أميرة ويوسف",
+        t2_l: "مراكش · 2024",
+        t3_q: "موهبة نادرة لالتقاط اللحظة الحاضرة بجمال خالد. كل صورة تجعلنا نبكي فرحاً، حتى اليوم.",
+        t3_n: "إيلينا وتوماس",
+        t3_l: "شفشاون · 2025",
+
+        team_kicker: "— اللحظة —",
+        team_text: "تصوير عرس يعني أن تصبح غير مرئي لتلتقط الجوهر بشكل أفضل.",
+
+        studio_kicker: "— الاستوديو —",
+        studio_l1: "تعالوا",
+        studio_l2: "للقائنا",
+        studio_lede: "لقهوة، أو شاي بالنعناع، أو استشارة حول مشروعكم — أهلاً بكم في الاستوديو بتطوان.",
+        studio_addr_l: "العنوان",
+        studio_phone_l: "الهاتف",
+        studio_hours_l: "بموعد مسبق",
+        studio_hours_v: "الإثنين — السبت · من 10 صباحاً إلى 19 مساءً",
+        studio_dir: "← الاتجاهات",
+
+        contact_kicker: "— الحجز —",
+        contact_l1: "لنبدأ",
+        contact_l2: "قصتكم",
+        contact_lede: "نقبل عدداً محدوداً من الأعراس كل سنة لضمان اهتمام كامل لكل ثنائي. رد شخصي خلال 48 ساعة.",
+        f_names: "أسماء العروسين",
+        f_email: "البريد الإلكتروني",
+        f_phone: "الهاتف",
+        f_date: "تاريخ الزفاف",
+        f_location: "المكان المرتقب",
+        f_coll: "المجموعة المطلوبة",
+        f_coll_default: "— اختر —",
+        f_coll_1: "مجموعة التوقيع",
+        f_coll_2: "أعراس الوجهات",
+        f_coll_3: "جلسة فنية",
+        f_coll_4: "أخرى / للنقاش",
+        f_msg: "حدثونا عن رؤيتكم",
+        f_submit: "إرسال الطلب",
+        f_foot: "معلوماتكم سرية. لا رسائل مزعجة، أبداً.",
+        success_msg: "شكراً. تم إرسال رسالتكم. سنعود إليكم خلال 48 ساعة.",
+        sending_msg: "جاري الإرسال…",
+        error_msg: "حدث خطأ. يمكنكم التواصل معنا مباشرة عبر البريد أو واتساب.",
+
+        footer_tag: "مصورة أعراس فنية",
+        footer_loc: "تطوان · المغرب",
+        footer_explore: "استكشاف",
+        footer_follow: "متابعة",
+        footer_contact: "تواصل",
+        footer_book: "طلب شخصي",
+        footer_rights: "جميع الحقوق محفوظة",
+        footer_credit: "موقع صُمم بحب في تطوان"
     }
 };
 
-/* =========================================================================
-   INITIALIZATION
-   ========================================================================= */
+/* ====== INIT ====== */
 document.addEventListener('DOMContentLoaded', () => {
+    initLoader();
     initYear();
-    initHero();
-    initNavbar();
+    initContactLinks();
+    initNav();
     initMobileMenu();
     initSmoothScroll();
-    initRevealOnScroll();
+    initReveal();
     initLightbox();
     initForm();
-    initLanguageSwitcher();
-    initPortfolioHover();
+    initLanguage();
 });
 
-/* =========================================================================
-   YEAR
-   ========================================================================= */
+/* ====== LOADER ====== */
+function initLoader() {
+    const loader = document.getElementById('loader');
+    if (!loader) return;
+    window.addEventListener('load', () => {
+        setTimeout(() => loader.classList.add('is-done'), 400);
+    });
+    // Failsafe
+    setTimeout(() => loader.classList.add('is-done'), 3500);
+}
+
+/* ====== YEAR ====== */
 function initYear() {
-    const yearEl = document.getElementById('currentYear');
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
+    const y = document.getElementById('currentYear');
+    if (y) y.textContent = new Date().getFullYear();
 }
 
-/* =========================================================================
-   HERO
-   ========================================================================= */
-function initHero() {
-    const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) {
-        // Trigger animation
-        requestAnimationFrame(() => {
-            heroBg.style.transform = 'scale(1)';
-        });
-    }
+/* ====== CONTACT LINKS ====== */
+function initContactLinks() {
+    const waUrl = `https://wa.me/${CONFIG.whatsappNumber}`;
+    const mailto = `mailto:${CONFIG.email}`;
+
+    document.querySelectorAll('[data-channel="whatsapp"], #waFloat, #footerWA').forEach(el => {
+        el.setAttribute('href', waUrl);
+    });
+    document.querySelectorAll('[data-channel="email"], #footerEmail').forEach(el => {
+        el.setAttribute('href', mailto);
+    });
 }
 
-/* =========================================================================
-   NAVBAR
-   ========================================================================= */
-function initNavbar() {
-    const navbar = document.getElementById('navbar');
-    if (!navbar) return;
-    
-    let lastScroll = 0;
-    const SCROLL_THRESHOLD = 100;
-    
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // Add scrolled class
-        if (currentScroll > 50) {
-            navbar.classList.add('scrolled');
+/* ====== NAV — scroll behavior ====== */
+function initNav() {
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+    let lastY = 0;
+    const onScroll = () => {
+        const y = window.scrollY;
+        nav.classList.toggle('is-scrolled', y > 60);
+        if (y > 280 && y > lastY) {
+            nav.classList.add('is-hidden');
         } else {
-            navbar.classList.remove('scrolled');
+            nav.classList.remove('is-hidden');
         }
-        
-        // Hide/show navbar
-        if (currentScroll > SCROLL_THRESHOLD) {
-            if (currentScroll > lastScroll && currentScroll > 300) {
-                navbar.classList.add('hide-nav');
-            } else {
-                navbar.classList.remove('hide-nav');
-            }
-        } else {
-            navbar.classList.remove('hide-nav');
-        }
-        
-        lastScroll = currentScroll;
-    }, { passive: true });
+        lastY = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-/* =========================================================================
-   MOBILE MENU
-   ========================================================================= */
+/* ====== MOBILE MENU ====== */
 function initMobileMenu() {
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    if (!hamburger || !mobileMenu) return;
-    
-    hamburger.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('open');
-        hamburger.classList.toggle('active');
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+    const burger = document.getElementById('hamburger');
+    const menu = document.getElementById('menuMobile');
+    if (!burger || !menu) return;
+
+    const close = () => {
+        menu.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+    const open = () => {
+        menu.classList.add('is-open');
+        burger.classList.add('is-open');
+        burger.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    burger.addEventListener('click', () => {
+        menu.classList.contains('is-open') ? close() : open();
     });
-    
-    // Close menu on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            hamburger.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && menu.classList.contains('is-open')) close();
     });
 }
 
-/* =========================================================================
-   SMOOTH SCROLL
-   ========================================================================= */
+/* ====== SMOOTH SCROLL ====== */
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#' || href === '#!') return;
-            
-            e.preventDefault();
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const href = a.getAttribute('href');
+            if (!href || href === '#' || href.length < 2) return;
             const target = document.querySelector(href);
-            
-            if (target) {
-                const offset = 80; // Navbar height
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            if (!target) return;
+            e.preventDefault();
+            const offset = 80;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
         });
     });
 }
 
-/* =========================================================================
-   REVEAL ON SCROLL
-   ========================================================================= */
-function initRevealOnScroll() {
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    if (!revealElements.length) return;
-    
-    const observer = new IntersectionObserver((entries) => {
+/* ====== REVEAL ON SCROLL ====== */
+function initReveal() {
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length || !('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('is-visible'));
+        return;
+    }
+    const obs = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    revealElements.forEach(el => observer.observe(el));
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    els.forEach(el => obs.observe(el));
 }
 
-/* =========================================================================
-   LIGHTBOX
-   ========================================================================= */
+/* ====== LIGHTBOX ====== */
 function initLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-    
-    if (!lightbox || !lightboxImg || !lightboxClose) return;
-    
-    // Open lightbox on portfolio item click
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            if (img) {
-                lightboxImg.src = img.src;
-                lightbox.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-    
-    // Close lightbox
-    const closeLightbox = () => {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
-        setTimeout(() => {
-            lightboxImg.src = '';
-        }, 400);
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCap = document.getElementById('lightboxCap');
+    const lbClose = document.getElementById('lightboxClose');
+    const lbPrev = document.getElementById('lightboxPrev');
+    const lbNext = document.getElementById('lightboxNext');
+    if (!lb || !lbImg || !lbClose) return;
+
+    const items = Array.from(document.querySelectorAll('.g-item'));
+    let current = 0;
+
+    const show = (idx) => {
+        if (idx < 0) idx = items.length - 1;
+        if (idx >= items.length) idx = 0;
+        current = idx;
+        const img = items[idx].querySelector('img');
+        const capEl = items[idx].querySelector('.cap');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt || '';
+        lbCap.textContent = capEl ? capEl.textContent : '';
     };
-    
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
+
+    const open = (idx) => {
+        show(idx);
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        setTimeout(() => { lbImg.src = ''; }, 400);
+    };
+
+    items.forEach((item, idx) => {
+        item.addEventListener('click', () => open(idx));
     });
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-            closeLightbox();
+    lbClose.addEventListener('click', close);
+    lbPrev && lbPrev.addEventListener('click', e => { e.stopPropagation(); show(current - 1); });
+    lbNext && lbNext.addEventListener('click', e => { e.stopPropagation(); show(current + 1); });
+    lb.addEventListener('click', e => { if (e.target === lb || e.target.classList.contains('lightbox-stage')) close(); });
+    document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+    });
+}
+
+/* ====== FORM ====== */
+function initForm() {
+    const form = document.getElementById('bookingForm');
+    const status = document.getElementById('formStatus');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const lang = document.documentElement.lang || 'fr';
+        const t = translations[lang] || translations.fr;
+
+        // Basic validation
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        status.textContent = t.sending_msg;
+        status.className = 'form-status';
+
+        try {
+            if (CONFIG.formspreeEndpoint) {
+                // Send via Formspree
+                const res = await fetch(CONFIG.formspreeEndpoint, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                });
+                if (!res.ok) throw new Error('Formspree error');
+                status.textContent = t.success_msg;
+                status.classList.add('is-success');
+                form.reset();
+            } else {
+                // Fallback: ouvre le client mail avec un message pré-rempli
+                const subject = encodeURIComponent(`Demande de réservation — ${data.names || ''}`);
+                const body = encodeURIComponent(
+                    `Couple: ${data.names || ''}\n` +
+                    `Email: ${data.email || ''}\n` +
+                    `Téléphone: ${data.phone || ''}\n` +
+                    `Date du mariage: ${data.date || ''}\n` +
+                    `Lieu: ${data.location || ''}\n` +
+                    `Collection: ${data.collection || ''}\n\n` +
+                    `Message:\n${data.message || ''}`
+                );
+                window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+                status.textContent = t.success_msg;
+                status.classList.add('is-success');
+                form.reset();
+            }
+        } catch (err) {
+            status.textContent = t.error_msg;
+            status.classList.add('is-error');
         }
     });
 }
 
-/* =========================================================================
-   FORM
-   ========================================================================= */
-function initForm() {
-    const form = document.getElementById('bookingForm');
-    if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const lang = document.documentElement.lang || 'fr';
-        const message = translations[lang].success_msg;
-        
-        // Show success message
-        alert(message);
-        
-        // Reset form
-        form.reset();
-        
-        // Optional: Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-/* =========================================================================
-   LANGUAGE SWITCHER
-   ========================================================================= */
-function initLanguageSwitcher() {
-    const setLanguage = (lang) => {
+/* ====== LANGUAGE ====== */
+function initLanguage() {
+    const setLang = (lang) => {
+        if (!translations[lang]) return;
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        
-        // Update active state on all lang buttons
+
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
+            btn.classList.toggle('is-active', btn.dataset.lang === lang);
         });
-        
-        // Translate text content
+
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
+            if (translations[lang][key] !== undefined) {
                 el.innerHTML = translations[lang][key];
             }
         });
-        
-        // Translate placeholders
+
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
-            if (translations[lang] && translations[lang][key]) {
+            if (translations[lang][key] !== undefined) {
                 el.placeholder = translations[lang][key];
             }
         });
-        
-        // Store preference
-        try {
-            localStorage.setItem('preferred-language', lang);
-        } catch (e) {
-            // Ignore localStorage errors
-        }
+
+        // Title
+        if (translations[lang].page_title) document.title = translations[lang].page_title;
+
+        try { localStorage.setItem('liika-lang', lang); } catch (_) {}
     };
-    
-    // Initialize language from localStorage or default
-    try {
-        const savedLang = localStorage.getItem('preferred-language');
-        if (savedLang && translations[savedLang]) {
-            setLanguage(savedLang);
-        }
-    } catch (e) {
-        // Ignore localStorage errors
-    }
-    
-    // Language button click handlers
+
+    // Init from localStorage
+    let saved = null;
+    try { saved = localStorage.getItem('liika-lang'); } catch (_) {}
+    if (saved && translations[saved]) setLang(saved);
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const lang = btn.dataset.lang;
-            if (lang && translations[lang]) {
-                setLanguage(lang);
-            }
+            setLang(btn.dataset.lang);
         });
     });
-}
-
-/* =========================================================================
-   PORTFOLIO HOVER EFFECTS
-   ========================================================================= */
-function initPortfolioHover() {
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-    portfolioItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            item.style.cursor = 'pointer';
-        });
-    });
-}
-
-/* =========================================================================
-   PARALLAX EFFECT (Optional Enhancement)
-   ========================================================================= */
-function initParallax() {
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
-    
-    if (!parallaxElements.length) return;
-    
-    window.addEventListener('scroll', () => {
-        parallaxElements.forEach(el => {
-            const speed = el.dataset.parallax || 0.5;
-            const yPos = -(window.pageYOffset * speed);
-            el.style.transform = `translateY(${yPos}px)`;
-        });
-    }, { passive: true });
-}
-
-/* =========================================================================
-   UTILITY: Debounce
-   ========================================================================= */
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
 }
