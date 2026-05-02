@@ -26,6 +26,7 @@ const translations = {
         nav_studio: "Studio",
         nav_book: "Réserver",
         menu_tag: "Tétouan · Maroc",
+        menu_addr: "Av. Haj Mohamed Bennouna · Tétouan",
 
         hero_meta_loc: "Tétouan · Maroc",
         hero_meta_year: "Saison 2025 — 2026",
@@ -172,6 +173,7 @@ const translations = {
         nav_studio: "الاستوديو",
         nav_book: "الحجز",
         menu_tag: "تطوان · المغرب",
+        menu_addr: "شارع الحاج محمد بنونة · تطوان",
 
         hero_meta_loc: "تطوان · المغرب",
         hero_meta_year: "موسم 2025 — 2026",
@@ -344,7 +346,7 @@ function initContactLinks() {
     const waUrl = `https://wa.me/${CONFIG.whatsappNumber}`;
     const mailto = `mailto:${CONFIG.email}`;
 
-    document.querySelectorAll('[data-channel="whatsapp"], #waFloat, #footerWA').forEach(el => {
+    document.querySelectorAll('[data-channel="whatsapp"], #waFloat, #footerWA, #menuMobileWA').forEach(el => {
         el.setAttribute('href', waUrl);
     });
     document.querySelectorAll('[data-channel="email"], #footerEmail').forEach(el => {
@@ -374,6 +376,7 @@ function initNav() {
 function initMobileMenu() {
     const burger = document.getElementById('hamburger');
     const menu = document.getElementById('menuMobile');
+    const closeBtn = document.getElementById('menuMobileClose');
     if (!burger || !menu) return;
 
     const close = () => {
@@ -394,7 +397,11 @@ function initMobileMenu() {
     burger.addEventListener('click', () => {
         menu.classList.contains('is-open') ? close() : open();
     });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    // Only nav links and contact links close — language buttons and the close btn don't
+    menu.querySelectorAll('.menu-mobile-nav a, .menu-mobile-contact a, .menu-mobile-logo').forEach(a => {
+        a.addEventListener('click', close);
+    });
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && menu.classList.contains('is-open')) close();
     });

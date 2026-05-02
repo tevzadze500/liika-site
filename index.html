@@ -110,22 +110,50 @@
 
     <!-- MOBILE MENU -->
     <aside class="menu-mobile" id="menuMobile" aria-hidden="true">
-        <ul>
-            <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
-            <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
-            <li><a href="#experience" data-i18n="nav_services">Expérience</a></li>
-            <li><a href="#about" data-i18n="nav_about">À propos</a></li>
-            <li><a href="#studio" data-i18n="nav_studio">Studio</a></li>
-            <li><a href="#contact" data-i18n="nav_book">Réserver</a></li>
-        </ul>
-        <div class="menu-mobile-foot">
-            <div class="lang">
-                <button class="lang-btn is-active" data-lang="fr">Français</button>
-                <span>·</span>
-                <button class="lang-btn" data-lang="ar">العربية</button>
+        <div class="menu-mobile-bg" aria-hidden="true"></div>
+
+        <header class="menu-mobile-head">
+            <a href="#home" class="menu-mobile-logo" aria-label="Liika">
+                <span>Liika</span>
+                <small data-i18n="logo_sub">Photographe</small>
+            </a>
+            <button class="menu-mobile-close" id="menuMobileClose" aria-label="Fermer le menu">
+                <span></span><span></span>
+            </button>
+        </header>
+
+        <nav class="menu-mobile-nav" aria-label="Menu principal">
+            <ol>
+                <li><a href="#home"><em>01</em><span data-i18n="nav_home">Accueil</span></a></li>
+                <li><a href="#portfolio"><em>02</em><span data-i18n="nav_portfolio">Portfolio</span></a></li>
+                <li><a href="#experience"><em>03</em><span data-i18n="nav_services">Expérience</span></a></li>
+                <li><a href="#about"><em>04</em><span data-i18n="nav_about">À propos</span></a></li>
+                <li><a href="#studio"><em>05</em><span data-i18n="nav_studio">Studio</span></a></li>
+                <li><a href="#contact"><em>06</em><span data-i18n="nav_book">Réserver</span></a></li>
+            </ol>
+        </nav>
+
+        <footer class="menu-mobile-foot">
+            <div class="menu-mobile-contact">
+                <a href="#" id="menuMobileWA" target="_blank" rel="noopener">
+                    <span class="kicker">WhatsApp</span>
+                    <span class="value">+212 6 42 15 97 52</span>
+                </a>
+                <a href="https://instagram.com/liika_photographe" target="_blank" rel="noopener">
+                    <span class="kicker">Instagram</span>
+                    <span class="value">@liika_photographe</span>
+                </a>
             </div>
-            <p data-i18n="menu_tag">Tétouan · Maroc</p>
-        </div>
+
+            <div class="menu-mobile-meta">
+                <p data-i18n="menu_addr">Av. Haj Mohamed Bennouna · Tétouan</p>
+                <div class="lang">
+                    <button class="lang-btn is-active" data-lang="fr">FR</button>
+                    <span aria-hidden="true">·</span>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </div>
+            </div>
+        </footer>
     </aside>
 
     <main>
