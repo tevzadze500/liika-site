@@ -20,20 +20,20 @@
     <meta property="og:title" content="Liika Photographe — Photographie de Mariage Éditoriale">
     <meta property="og:description" content="Une approche cinématographique du mariage. Images intemporelles, signature éditoriale, basée à Tétouan.">
     <meta property="og:url" content="https://liika-site.vercel.app/">
-    <meta property="og:image" content="https://liika-site.vercel.app/assets/images/hero.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Portrait éditorial de mariée par Liika Photographe">
+    <meta property="og:image" content="https://liika-site.vercel.app/assets/images/bride-emerald.jpg">
+    <meta property="og:image:width" content="960">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Mariée marocaine, couronne émeraude et caftan brodé, photographiée par Liika">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Liika Photographe — Photographie de Mariage Éditoriale">
     <meta name="twitter:description" content="Une approche cinématographique du mariage. Images intemporelles, basée à Tétouan, Maroc.">
-    <meta name="twitter:image" content="https://liika-site.vercel.app/assets/images/hero.png">
+    <meta name="twitter:image" content="https://liika-site.vercel.app/assets/images/bride-emerald.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+    <link rel="apple-touch-icon" href="assets/favicon-180.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Preload hero -->
-    <link rel="preload" as="image" href="assets/images/hero.png" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/bride-emerald.jpg" fetchpriority="high">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -52,7 +52,7 @@
         "@type": "LocalBusiness",
         "@id": "https://liika-site.vercel.app/#business",
         "name": "Liika Photographe",
-        "image": "https://liika-site.vercel.app/assets/images/hero.png",
+        "image": "https://liika-site.vercel.app/assets/images/bride-emerald.jpg",
         "url": "https://liika-site.vercel.app/",
         "description": "Photographie de mariage éditoriale et intemporelle à Tétouan, Maroc.",
         "address": {
@@ -73,7 +73,7 @@
     <!-- LOADER -->
     <div class="loader" id="loader" aria-hidden="true">
         <div class="loader-inner">
-            <span class="loader-mark">L</span>
+            <span class="loader-mark"><img src="assets/logo.png" alt="" class="loader-logo-img"></span>
             <span class="loader-line"></span>
         </div>
     </div>
@@ -86,9 +86,8 @@
                 <a href="#experience" data-i18n="nav_services">Expérience</a>
             </div>
 
-            <a href="#home" class="nav-logo" aria-label="Liika - Accueil">
-                <span class="nav-logo-text">Liika</span>
-                <span class="nav-logo-sub" data-i18n="logo_sub">Photographe</span>
+            <a href="#home" class="nav-logo" aria-label="Lika - Accueil">
+                <img src="assets/logo.png" alt="Lika" class="nav-logo-img" width="1544" height="824" decoding="async">
             </a>
 
             <div class="nav-side nav-side--right">
@@ -113,9 +112,8 @@
         <div class="menu-mobile-bg" aria-hidden="true"></div>
 
         <header class="menu-mobile-head">
-            <a href="#home" class="menu-mobile-logo" aria-label="Liika">
-                <span>Liika</span>
-                <small data-i18n="logo_sub">Photographe</small>
+            <a href="#home" class="menu-mobile-logo" aria-label="Lika">
+                <img src="assets/logo.png" alt="Lika" class="menu-mobile-logo-img">
             </a>
             <button class="menu-mobile-close" id="menuMobileClose" aria-label="Fermer le menu">
                 <span></span><span></span>
@@ -161,7 +159,7 @@
         <!-- HERO -->
         <header id="home" class="hero">
             <div class="hero-image">
-                <img src="assets/images/hero.png" alt="Mariée éditoriale photographiée par Liika" fetchpriority="high">
+                <img src="assets/images/bride-emerald.jpg" alt="Mariée marocaine, couronne émeraude et caftan brodé, photographiée par Liika" fetchpriority="high">
             </div>
             <div class="hero-veil"></div>
 
@@ -177,6 +175,7 @@
                     <span class="hero-title-l2" data-i18n="hero_l2"><em>en lumière</em></span>
                 </h1>
                 <p class="hero-sub" data-i18n="hero_sub">Une approche cinématographique du mariage. Images sensibles, intemporelles, pensées comme des œuvres.</p>
+                <p class="hero-badge" data-i18n="hero_badge">Une équipe 100% féminine</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn--solid" data-i18n="hero_cta1">Réserver votre date</a>
                     <a href="#portfolio" class="btn btn--ghost" data-i18n="hero_cta2">Voir le portfolio</a>
@@ -195,6 +194,7 @@
                 <span>Editorial</span><span>·</span>
                 <span>Cinematic</span><span>·</span>
                 <span>Heritage</span><span>·</span>
+                <span>Women-Led</span><span>·</span>
                 <span>Tétouan</span><span>·</span>
                 <span>Marrakech</span><span>·</span>
                 <span>Chefchaouen</span><span>·</span>
@@ -203,6 +203,7 @@
                 <span>Editorial</span><span>·</span>
                 <span>Cinematic</span><span>·</span>
                 <span>Heritage</span><span>·</span>
+                <span>Women-Led</span><span>·</span>
                 <span>Tétouan</span><span>·</span>
                 <span>Marrakech</span><span>·</span>
                 <span>Chefchaouen</span><span>·</span>
@@ -229,7 +230,7 @@
         <!-- FEATURED FULL -->
         <section class="featured reveal">
             <figure class="featured-frame">
-                <img src="assets/images/IMG_7260.PNG" alt="Portrait sensible d'une mariée" loading="lazy">
+                <img src="assets/images/couple.jpg" alt="Couple de mariés enlacés, la mariée tenant son bouquet" loading="lazy">
                 <figcaption>
                     <span class="kicker" data-i18n="featured_kicker">Chapitre I</span>
                     <span class="featured-title" data-i18n="featured_title">L'instant du regard</span>
@@ -250,7 +251,7 @@
 
             <div class="gallery">
                 <figure class="g-item g-item--tall reveal" data-cap-i18n="port_cap1">
-                    <img src="assets/images/IMG_7260.PNG" alt="La mariée" loading="lazy">
+                    <img src="assets/images/real_2.jpg" alt="La mariée marocaine en tenue traditionnelle, rayonnante" loading="lazy">
                     <figcaption>
                         <span class="num">01</span>
                         <span class="cap" data-i18n="port_cap1">La Mariée</span>
@@ -274,7 +275,7 @@
                 </figure>
 
                 <figure class="g-item g-item--portrait reveal" data-cap-i18n="port_cap4">
-                    <img src="assets/images/IMG_7258.PNG" alt="Tradition du henné" loading="lazy">
+                    <img src="assets/images/bride-veil.jpg" alt="Mariée voilée aux mains ornées de henné" loading="lazy">
                     <figcaption>
                         <span class="num">04</span>
                         <span class="cap" data-i18n="port_cap4">Traditions</span>
@@ -305,7 +306,7 @@
         <!-- DIPTYCH -->
         <section class="diptych reveal">
             <figure class="diptych-img">
-                <img src="assets/images/IMG_7257.PNG" alt="Détail bague" loading="lazy">
+                <img src="assets/images/IMG_7260.PNG" alt="Détail henné et bijoux de la mariée" loading="lazy">
             </figure>
             <div class="diptych-text">
                 <span class="kicker" data-i18n="dip_kicker">— Les Détails —</span>
@@ -456,7 +457,7 @@
         <!-- TEAM IMAGE -->
         <section class="team-image reveal">
             <figure>
-                <img src="assets/images/real_2.jpg" alt="Le moment partagé — équipe Liika" loading="lazy">
+                <img src="assets/images/real_1.jpg" alt="Le moment partagé — équipe Liika" loading="lazy">
                 <figcaption>
                     <span class="kicker" data-i18n="team_kicker">— Le moment —</span>
                     <p data-i18n="team_text">Photographier un mariage, c'est devenir invisible pour mieux capturer l'essentiel.</p>
