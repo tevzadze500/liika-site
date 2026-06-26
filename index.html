@@ -20,16 +20,16 @@
     <meta property="og:title" content="Liika Photographe — Photographie de Mariage Éditoriale">
     <meta property="og:description" content="Une approche cinématographique du mariage. Images intemporelles, signature éditoriale, basée à Tétouan.">
     <meta property="og:url" content="https://liika-site.vercel.app/">
-    <meta property="og:image" content="https://liika-site.vercel.app/assets/images/bride-emerald.jpg">
-    <meta property="og:image:width" content="960">
-    <meta property="og:image:height" content="1280">
-    <meta property="og:image:alt" content="Mariée marocaine, couronne émeraude et caftan brodé, photographiée par Liika">
+    <meta property="og:image" content="https://liika-site.vercel.app/assets/images/real_2.jpg">
+    <meta property="og:image:width" content="819">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="Mariée marocaine en tenue traditionnelle, photographiée par Liika">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Liika Photographe — Photographie de Mariage Éditoriale">
     <meta name="twitter:description" content="Une approche cinématographique du mariage. Images intemporelles, basée à Tétouan, Maroc.">
-    <meta name="twitter:image" content="https://liika-site.vercel.app/assets/images/bride-emerald.jpg">
+    <meta name="twitter:image" content="https://liika-site.vercel.app/assets/images/real_2.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
@@ -41,7 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Preload hero -->
-    <link rel="preload" as="image" href="assets/images/bride-emerald.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/logo-trans.png" fetchpriority="high">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -52,7 +52,7 @@
         "@type": "LocalBusiness",
         "@id": "https://liika-site.vercel.app/#business",
         "name": "Liika Photographe",
-        "image": "https://liika-site.vercel.app/assets/images/bride-emerald.jpg",
+        "image": "https://liika-site.vercel.app/assets/images/real_2.jpg",
         "url": "https://liika-site.vercel.app/",
         "description": "Photographie de mariage éditoriale et intemporelle à Tétouan, Maroc.",
         "address": {
@@ -73,7 +73,7 @@
     <!-- LOADER -->
     <div class="loader" id="loader" aria-hidden="true">
         <div class="loader-inner">
-            <span class="loader-mark"><img src="assets/logo.png" alt="" class="loader-logo-img"></span>
+            <span class="loader-mark"><img src="assets/logo-trans.png" alt="" class="loader-logo-img"></span>
             <span class="loader-line"></span>
         </div>
     </div>
@@ -87,7 +87,7 @@
             </div>
 
             <a href="#home" class="nav-logo" aria-label="Lika - Accueil">
-                <img src="assets/logo.png" alt="Lika" class="nav-logo-img" width="1544" height="824" decoding="async">
+                <img src="assets/logo-trans.png" alt="Lika" class="nav-logo-img" width="1544" height="824" decoding="async">
             </a>
 
             <div class="nav-side nav-side--right">
@@ -113,7 +113,7 @@
 
         <header class="menu-mobile-head">
             <a href="#home" class="menu-mobile-logo" aria-label="Lika">
-                <img src="assets/logo.png" alt="Lika" class="menu-mobile-logo-img">
+                <img src="assets/logo-trans.png" alt="Lika" class="menu-mobile-logo-img">
             </a>
             <button class="menu-mobile-close" id="menuMobileClose" aria-label="Fermer le menu">
                 <span></span><span></span>
@@ -156,30 +156,17 @@
 
     <main>
 
-        <!-- HERO -->
-        <header id="home" class="hero">
-            <div class="hero-image">
-                <img src="assets/images/bride-emerald.jpg" alt="Mariée marocaine, couronne émeraude et caftan brodé, photographiée par Liika" fetchpriority="high">
-            </div>
-            <div class="hero-veil"></div>
-
-            <div class="hero-meta hero-meta--top">
-                <span data-i18n="hero_meta_loc">Tétouan · Maroc</span>
-                <span data-i18n="hero_meta_year">Saison 2025 — 2026</span>
-            </div>
-
-            <div class="hero-content">
-                <span class="kicker hero-kicker" data-i18n="hero_kicker">— Photographie éditoriale de mariage —</span>
-                <h1 class="hero-title">
-                    <span class="hero-title-l1" data-i18n="hero_l1">L'éternité</span>
-                    <span class="hero-title-l2" data-i18n="hero_l2"><em>en lumière</em></span>
-                </h1>
-                <p class="hero-sub" data-i18n="hero_sub">Une approche cinématographique du mariage. Images sensibles, intemporelles, pensées comme des œuvres.</p>
-                <p class="hero-badge" data-i18n="hero_badge">Une équipe 100% féminine</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn--solid" data-i18n="hero_cta1">Réserver votre date</a>
-                    <a href="#portfolio" class="btn btn--ghost" data-i18n="hero_cta2">Voir le portfolio</a>
-                </div>
+        <!-- HERO — intro logo -->
+        <header id="home" class="hero hero--intro">
+            <div class="hero-intro-inner">
+                <img src="assets/logo-trans.png" alt="Lika — Photography Studio" class="hero-logo" fetchpriority="high">
+                <p class="hero-femme" data-i18n="hero_badge">Une équipe <b>100%</b> féminine</p>
+                <span class="hero-rule" aria-hidden="true"></span>
+                <p class="hero-tagline">
+                    <span data-i18n="hero_kicker">Photographie de mariage éditoriale</span>
+                    <span class="hero-dot" aria-hidden="true">·</span>
+                    <span data-i18n="hero_meta_loc">Tétouan · Maroc</span>
+                </p>
             </div>
 
             <div class="hero-scroll">
@@ -251,7 +238,7 @@
 
             <div class="gallery">
                 <figure class="g-item g-item--tall reveal" data-cap-i18n="port_cap1">
-                    <img src="assets/images/real_2.jpg" alt="La mariée marocaine en tenue traditionnelle, rayonnante" loading="lazy">
+                    <img src="assets/images/bride-emerald.jpg" alt="La mariée, couronne émeraude et caftan brodé" loading="lazy">
                     <figcaption>
                         <span class="num">01</span>
                         <span class="cap" data-i18n="port_cap1">La Mariée</span>
