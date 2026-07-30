@@ -2,6 +2,14 @@
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+        {
+            "source": "/(.*)",
+            "has": [{ "type": "host", "value": "liika-site.vercel.app" }],
+            "destination": "https://www.liika-photographe.ma/$1",
+            "permanent": true
+        }
+    ],
     "headers": [
         {
             "source": "/assets/(.*)",
