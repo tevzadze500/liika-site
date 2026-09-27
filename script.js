@@ -56,7 +56,7 @@ const translations = {
         port_cap3: "L'Alliance",
         port_cap4: "Traditions",
         port_cap5: "La Cérémonie",
-        port_cap6: "Complicité",
+        port_cap6: "L'Étreinte",
         port_cap7: "La Couronne",
         port_cap8: "Les Préparatifs",
 
@@ -206,7 +206,7 @@ const translations = {
         port_cap3: "الخاتم",
         port_cap4: "التقاليد",
         port_cap5: "الحفل",
-        port_cap6: "الانسجام",
+        port_cap6: "العناق",
         port_cap7: "التاج",
         port_cap8: "التحضيرات",
 
