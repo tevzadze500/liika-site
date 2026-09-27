@@ -825,6 +825,7 @@ input, textarea, select, button { font: inherit; color: inherit; }
 .g-item--portrait  { grid-column: span 2; grid-row: span 3; }
 .g-item--landscape { grid-column: span 4; grid-row: span 2; }
 .g-item--medium    { grid-column: span 2; grid-row: span 2; }
+.g-item--feature   { grid-column: span 4; grid-row: span 3; }
 
 /* ========== QUOTE ========== */
 .quote {
@@ -1508,16 +1509,7 @@ a.studio-value:hover { color: var(--accent); }
 @media (max-width: 1100px) {
     .nav-side { gap: 1.6rem; font-size: 0.7rem; }
     .nav-side a:nth-child(n+3) { display: none; }
-    .gallery {
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 22vw;
-    }
-    .g-item--tall      { grid-column: span 2; grid-row: span 2; }
-    .g-item--wide      { grid-column: span 4; grid-row: span 2; }
-    .g-item--square    { grid-column: span 2; grid-row: span 2; }
-    .g-item--portrait  { grid-column: span 2; grid-row: span 2; }
-    .g-item--landscape { grid-column: span 4; grid-row: span 2; }
-    .g-item--medium    { grid-column: span 2; grid-row: span 2; }
+    .gallery { grid-auto-rows: 16vw; }
 }
 
 @media (max-width: 860px) {
@@ -1545,13 +1537,18 @@ a.studio-value:hover { color: var(--accent); }
 
     .gallery {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 45vw;
+        grid-auto-rows: 30vw;
     }
-    .g-item--tall, .g-item--wide, .g-item--square,
-    .g-item--portrait, .g-item--landscape, .g-item--medium {
-        grid-column: span 2; grid-row: span 1;
+    .g-item--tall, .g-item--portrait, .g-item--square, .g-item--medium {
+        grid-column: span 1; grid-row: span 2;
     }
-    .g-item--tall, .g-item--portrait { grid-row: span 2; }
+    .g-item--wide, .g-item--landscape, .g-item--feature,
+    .g-item--square:last-child {
+        grid-column: span 2; grid-row: span 2;
+    }
+    .g-item--square:last-child img { object-position: 50% 18%; }
+    .g-item .cap { font-size: 1.1rem; }
+    .g-item figcaption { padding: 1rem 1.1rem; }
     .g-item figcaption { opacity: 1; transform: none; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0) 70%); }
 
     .diptych, .about-grid, .studio-grid {
