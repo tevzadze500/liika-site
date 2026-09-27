@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://www.liika-photographe.ma/</loc>
-        <lastmod>2026-07-30</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.liika-photographe.ma/"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://www.liika-photographe.ma/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.liika-photographe.ma/"/>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/couple-heart.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/bride-crown.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/bride-prep.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/bride-emerald.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/bride-veil.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/couple.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/real_4.jpg</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/IMG_7256.PNG</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/IMG_7257.PNG</image:loc></image:image>
+        <image:image><image:loc>https://www.liika-photographe.ma/assets/images/IMG_7260.PNG</image:loc></image:image>
     </url>
 </urlset>

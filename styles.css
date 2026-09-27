@@ -618,6 +618,7 @@ input, textarea, select, button { font: inherit; color: inherit; }
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: none; }
 }
+.hero-h1 { margin: 0; font-size: inherit; line-height: 0; }
 .hero-logo {
     width: min(440px, 80vw);
     height: auto;

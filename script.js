@@ -16,7 +16,7 @@ const CONFIG = {
 /* ====== TRANSLATIONS ====== */
 const translations = {
     fr: {
-        page_title: "Liika Photographe — Photographie de Mariage Éditoriale · Tétouan",
+        page_title: "Liika Photographe — Photographie de Mariage Éditoriale · Tétouan, Maroc",
         logo_sub: "Photographe",
 
         nav_home: "Accueil",
